@@ -19,8 +19,7 @@ const markers = L.markerClusterGroup({
   showCoverageOnHover: false,
   maxClusterRadius: 20,
 });
-
-
+map.addLayer(markers);
 
 // Define helpers for custom marker and adding a cousin
 const getCustomIcon = (name) => L.divIcon({
@@ -35,49 +34,46 @@ const addCousin = (name, coords) => {
 }
 
 // Location coords
-const alaskaCoords = [64.2008, -149.4937];
-const atlantaCoords = [33.7490, -84.3880];
-const bostonCoords = [42.3601, -71.0589];
-const edmondsWashingtonCoords1 = [47.8107, -122.3774];
-const edmondsWashingtonCoords2 = [47.8207, -122.3874]; // for "2" we shift the coords by 0.1 in each direction
-const kenmoreWashingtonCoords = [47.7573, -122.2440];
-const newYorkCoords = [40.7128, -74.0060];
-const portlandCoords1 = [45.5051, -122.6750];
-const portlandCoords2 = [45.5151, -122.6850]; // for "2" we shift the coords by 0.1 in each direction
-const portlandCoords3 = [45.5251, -122.6950]; // for "3" we shift the coords by 0.2 in each direction
-const portlandMaineCoords = [43.6591, -70.2568];
-const riversideCoords = [33.9806, -117.3755];
-const sanFranciscoCoords = [37.7749, -122.4194];
-const seattleCoords = [47.6062, -122.3321];
-const tacomaCoords = [47.2529, -122.4443];
-const wenatcheeCoords1 = [47.4235, -120.3103];
-const wenatcheeCoords2 = [47.4335, -120.3203];
-const wenatcheeCoords3 = [47.4435, -120.3303];
+const alaska = [64.2008, -149.4937];
+const atlanta = [33.7490, -84.3880];
+const boston = [42.3601, -71.0589];
+const edmondsWashington1 = [47.8107, -122.3774];
+const edmondsWashington2 = [47.8207, -122.3874]; // for "2" we shift the  by 0.1 in each direction
+const kenmoreWashington = [47.7573, -122.2440];
+const newYork = [40.7128, -74.0060];
+const portland1 = [45.5051, -122.6750];
+const portland2 = [45.5151, -122.6850]; // for "2" we shift the  by 0.1 in each direction
+const portland3 = [45.5251, -122.6950]; // for "3" we shift the  by 0.2 in each direction
+const portlandMaine = [43.6591, -70.2568];
+const riverside = [33.9806, -117.3755];
+const sanFrancisco = [37.7749, -122.4194];
+const seattle = [47.6062, -122.3321];
+const tacoma = [47.2529, -122.4443];
+const wenatchee1 = [47.4235, -120.3103];
+const wenatchee2 = [47.4335, -120.3203];
+const wenatchee3 = [47.4435, -120.3303];
 
 // Add cousins
-
 // Kate
-addCousin('Ian', alaskaCoords);
-addCousin('Colin', kenmoreWashingtonCoords);
+addCousin('Ian', alaska);
+addCousin('Colin', kenmoreWashington);
 // Sue
-addCousin('Genna', edmondsWashingtonCoords1);
-addCousin('Reiland', edmondsWashingtonCoords2);
+addCousin('Genna', edmondsWashington1);
+addCousin('Reiland', edmondsWashington2);
 // John
-addCousin('Kyle', wenatcheeCoords1);
-addCousin('Frank', wenatcheeCoords2);
-addCousin('Sean', wenatcheeCoords3);
+addCousin('Kyle', wenatchee1);
+addCousin('Frank', wenatchee2);
+addCousin('Sean', wenatchee3);
 // Molly
-addCousin('Shannon', newYorkCoords);
+addCousin('Shannon', newYork);
 // Julia
-addCousin('Tommy', portlandCoords1);
-addCousin('Clare (1/2)', riversideCoords);
-addCousin('Clare (2/2)', portlandMaineCoords);
-addCousin('Annie', portlandCoords2);
+addCousin('Tommy', portland1);
+addCousin('Clare (1/2)', riverside);
+addCousin('Clare (2/2)', portlandMaine);
+addCousin('Annie', portland2);
 // Colleen
-addCousin('Andy', bostonCoords);
-addCousin('Tristan', seattleCoords);
+addCousin('Andy', boston);
+addCousin('Tristan', seattle);
 // Jane
-addCousin('Pearl', portlandCoords3)
-addCousin('Grace', atlantaCoords)
-
-map.addLayer(markers);
+addCousin('Pearl', portland3)
+addCousin('Grace', atlanta)
