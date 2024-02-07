@@ -1,5 +1,7 @@
 A webpage to track where all of Tristan's cousins are living around the world.
 
+Check it out at: https://www.tristanpendergrass.com/cousins/
+
 # Development
 
 ```
