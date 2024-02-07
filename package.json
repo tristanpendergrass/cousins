@@ -11,6 +11,7 @@
     "npm": "^10.4.0"
   },
   "scripts": {
-    "start": "npx parcel src/index.html"
+    "start": "npx parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir docs --public-url https://www.tristanpendergrass.com/cousins/"
   }
 }
