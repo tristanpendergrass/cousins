@@ -5,7 +5,10 @@
     "tailwindcss": "^3.4.1"
   },
   "dependencies": {
-    "leaflet": "^1.9.4"
+    "install": "^0.13.0",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
+    "npm": "^10.4.0"
   },
   "scripts": {
     "start": "npx parcel src/index.html"

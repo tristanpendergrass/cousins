@@ -1,9 +1,13 @@
 import './index.css';
 
+// Makes leaflet work
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-console.log(L.Icon.Default.prototype._getIconUrl())
+// Makes leaflet marker clustering plugin work
+import 'leaflet.markercluster';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 
 // Set up the map
 const map = L.map('map').setView([39.8283, -98.5795], 3);
@@ -11,6 +15,12 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap contributors, © CARTO'
 }).addTo(map);
+const markers = L.markerClusterGroup({
+  showCoverageOnHover: false,
+  maxClusterRadius: 20,
+});
+
+
 
 // Define helpers for custom marker and adding a cousin
 const getCustomIcon = (name) => L.divIcon({
@@ -20,10 +30,11 @@ const getCustomIcon = (name) => L.divIcon({
   iconAnchor: [0, 12.5] // keep the first value at zero if you want the marker to be to the right of the coordinates. Keep the second at half the height to vertically center it
 });
 const addCousin = (name, coords) => {
-  L.marker(coords, { icon: getCustomIcon(name) }).addTo(map);
+  const marker = L.marker(coords, { icon: getCustomIcon(name) });
+  markers.addLayer(marker);
 }
 
-// City coords
+// Location coords
 const alaskaCoords = [64.2008, -149.4937];
 const atlantaCoords = [33.7490, -84.3880];
 const bostonCoords = [42.3601, -71.0589];
@@ -62,3 +73,5 @@ addCousin('Tristan', seattleCoords);
 // Jane
 addCousin('Pearl', tacomaCoords)
 addCousin('Grace', atlantaCoords)
+
+map.addLayer(markers);
