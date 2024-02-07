@@ -70,8 +70,8 @@ addCousin('Sean', wenatcheeCoords3);
 addCousin('Shannon', newYorkCoords);
 // Julia
 addCousin('Tommy', portlandCoords1);
-addCousin('Claire (1/2)', riversideCoords);
-addCousin('Claire (2/2)', portlandMaineCoords);
+addCousin('Clare (1/2)', riversideCoords);
+addCousin('Clare (2/2)', portlandMaineCoords);
 addCousin('Annie', portlandCoords2);
 // Colleen
 addCousin('Andy', bostonCoords);
