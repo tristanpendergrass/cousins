@@ -42,7 +42,11 @@ const edmondsWashingtonCoords1 = [47.8107, -122.3774];
 const edmondsWashingtonCoords2 = [47.8207, -122.3874]; // for "2" we shift the coords by 0.1 in each direction
 const kenmoreWashingtonCoords = [47.7573, -122.2440];
 const newYorkCoords = [40.7128, -74.0060];
-const portlandCoords = [45.5051, -122.6750];
+const portlandCoords1 = [45.5051, -122.6750];
+const portlandCoords2 = [45.5151, -122.6850]; // for "2" we shift the coords by 0.1 in each direction
+const portlandCoords3 = [45.5251, -122.6950]; // for "3" we shift the coords by 0.2 in each direction
+const portlandMaineCoords = [43.6591, -70.2568];
+const riversideCoords = [33.9806, -117.3755];
 const sanFranciscoCoords = [37.7749, -122.4194];
 const seattleCoords = [47.6062, -122.3321];
 const tacomaCoords = [47.2529, -122.4443];
@@ -65,13 +69,15 @@ addCousin('Sean', wenatcheeCoords3);
 // Molly
 addCousin('Shannon', newYorkCoords);
 // Julia
-addCousin('Claire', sanFranciscoCoords);
-addCousin('Annie', portlandCoords);
+addCousin('Tommy', portlandCoords1);
+addCousin('Claire (1/2)', riversideCoords);
+addCousin('Claire (2/2)', portlandMaineCoords);
+addCousin('Annie', portlandCoords2);
 // Colleen
 addCousin('Andy', bostonCoords);
 addCousin('Tristan', seattleCoords);
 // Jane
-addCousin('Pearl', tacomaCoords)
+addCousin('Pearl', portlandCoords3)
 addCousin('Grace', atlantaCoords)
 
 map.addLayer(markers);
