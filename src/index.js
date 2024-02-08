@@ -58,7 +58,7 @@ const wenatchee3 = [47.4435, -120.3303];
 addCousin('Ian', alaska);
 addCousin('Colin', kenmoreWashington);
 // Sue
-addCousin('Genna', edmondsWashington1);
+// addCousin('Genna'); // omitted by request
 addCousin('Reiland', edmondsWashington2);
 // John
 addCousin('Kyle', wenatchee1);
